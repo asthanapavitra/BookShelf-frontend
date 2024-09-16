@@ -1,0 +1,89 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.search-sort {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically by default */
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the input groups */
+.input-container {
+  display: flex;
+  flex-direction: column; /* Stack input groups vertically by default */
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+  width: 100%;
+  max-width: 600px; /* Limit the maximum width */
+}
+
+/* Individual input fields and select boxes */
+.input,
+select.input {
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #f5ba13;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  width: 100%; /* Make inputs and select full width within their containers */
+}
+
+.input:focus,
+select.input:focus {
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+  border-color: #f5ba13;
+}
+
+/* Style for icons */
+.icon {
+  color: #f5ba13;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #333;
+}
+
+/* Specific styles for select element */
+select.input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 20px; /* Add padding to accommodate the icon */
+  position: relative;
+}
+
+/* Container to hold both input and icon on the same row */
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between input and icon */
+  width: 100%;
+}
+
+.input-group .input {
+  flex: 1; /* Make input take remaining space */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-container {
+    flex-direction: column; /* Stack input groups vertically on small screens */
+  }
+
+  .input-group {
+    flex-direction: row; /* Keep input and icon on the same row */
+  }
+}

@@ -1,0 +1,89 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+.book-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  max-width: 600px;
+  text-align: left;
+  border: 2px solid #f5ba13;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.book-cover {
+  width: 150px;
+  height: auto;
+  border-right: 2px solid #f5ba13;
+}
+
+.book-info {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+  color: #333;
+}
+
+.book-author,
+.book-publish-date,
+.book-rating {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.book-author {
+  font-weight: 500;
+}
+
+.book-publish-date {
+  font-style: italic;
+}
+
+.book-rating {
+  color: #f5ba13;
+  font-weight: bold;
+}
+
+.book-description {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  color: #555;
+  margin: 10px 0;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.book-link {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #f5ba13;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.book-link:hover {
+  color: #333;
+}

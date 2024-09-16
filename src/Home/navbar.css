@@ -1,0 +1,125 @@
+/* Navbar CSS */
+* {
+    margin: 0;
+    font-family: "Montserrat";
+}
+
+.navbar {
+    background-color: #f5ba13;
+    margin: auto -16px;
+    padding: 16px 32px;
+    display: flex;
+    color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* For positioning the dropdown */
+}
+
+.navbar h1 {
+    display: inline;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+}
+
+.links {
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 8px;
+    padding: 8px 16px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #f5ba13;
+    font-weight: bold;
+}
+
+.links:hover {
+    background-color: #f5ba13;
+    color: #fff;
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.add-new-book {
+    background-color: #fff;
+    color: #f5ba13;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 16px;
+}
+
+.add-new-book:hover {
+    background-color: #f5ba13;
+    color: #fff;
+    text-decoration: underline;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 200px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #f5ba13;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown a:hover {
+    background-color: #f5ba13;
+    color: #fff;
+}
+
+/* Show dropdown when active */
+.dropdown-active {
+    display: block;
+}
+.dropdown-trigger{
+    display: none;
+    
+}
+/* Hide original links on small screens */
+@media (max-width: 768px) {
+    .link-container {
+        display: none;
+    }
+
+    .dropdown-trigger {
+        display: block;
+        background: none;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 8px 16px;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 1000;
+    }
+
+    .dropdown {
+        /* top: 50px;  */
+        right: 16px; /* Align with dropdown-trigger */
+    }
+}
+
