@@ -15,10 +15,14 @@ function App() {
 
   // Function to fetch books with optional search and sort params
   const fetchBooks = async (search = '', sort = 'Title') => {
-    const response = await axios.get('http://localhost:5000/api/books', {
-      params: { search, sort }
-    });
-    setBooks(response.data);
+    try {
+      const response = await axios.get('https://bookshelf-backend-phi.vercel.app/api/books', {
+        params: { search, sort }
+      });
+      setBooks(response.data);
+    } catch (error) {
+      console.error("Error fetching books:", error);
+    }
   };
 
   // Search handler
@@ -32,8 +36,12 @@ function App() {
   };
 
   const handleAddBook = async (newBook) => {
-    const response = await axios.post('http://localhost:5000/api/books', newBook);
-    setBooks([...books, response.data]);
+    try {
+      const response = await axios.post('https://bookshelf-backend-phi.vercel.app/api/books', newBook);
+      setBooks([...books, response.data]);
+    } catch (error) {
+      console.error("Error adding book:", error);
+    }
   };
 
   return (
@@ -49,8 +57,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
